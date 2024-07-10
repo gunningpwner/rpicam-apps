@@ -42,8 +42,8 @@ summary({
 
 rpicam_app_src = []
 rpicam_app_dep = [libcamera_dep, dl_dep]
-install_headers('../WiringPi/debian-template/wiringPi/usr/include/wiringPi.h')
-wipi_dep = dependency('wiringPi')
+install_headers('../WiringPi/wiringPi/wiringPi.h')
+wipi_dep = dependency('wiringPi', required : true)
 subdir('core')
 subdir('encoder')
 subdir('image')
