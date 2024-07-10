@@ -42,7 +42,8 @@ summary({
 
 rpicam_app_src = []
 rpicam_app_dep = [libcamera_dep, dl_dep]
-
+my_inc = include_directories('/mnt/c/Users/gunni/Desktop/rasp_pi/WiringPi/debian-template/wiringPi/usr/include')
+install_headers('/mnt/c/Users/gunni/Desktop/rasp_pi/WiringPi/debian-template/wiringPi/usr/include/wiringPi.h')
 subdir('core')
 subdir('encoder')
 subdir('image')
@@ -71,7 +72,6 @@ install_symlink('libcamera_app.so',
                 pointing_to: 'rpicam_app.so')
 
 subdir('apps')
-
 summary({
             'libav encoder' : enable_libav,
             'drm preview' : enable_drm,
