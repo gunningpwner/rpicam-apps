@@ -43,7 +43,7 @@ summary({
 rpicam_app_src = []
 rpicam_app_dep = [libcamera_dep, dl_dep]
 install_headers('../WiringPi/wiringPi/wiringPi.h')
-wipi_dep = dependency('wiringPi', required : true)
+wpi_dep = cxx.find_library('wiringPi')
 subdir('core')
 subdir('encoder')
 subdir('image')
